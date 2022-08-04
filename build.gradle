@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.26")
+    }
+}
+
+dependencies {
+    testImplementation 'org.assertj:assertj-core:3.12.2'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.29'
+    testImplementation 'net.serenity-bdd:serenity-core:1.1.26'
+    testImplementation 'net.serenity-bdd:serenity-junit:1.1.26'
+    implementation 'net.serenity-bdd:serenity-screenplay:1.1.26'
+   // implementation 'net.serenity-bdd:serenity-screenplay-rest:1.1.26'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.1.26'
+}
+gradle.startParameter.continueOnFailure = true
+
+/**dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.assertj:assertj-core:3.12.2'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.29'
+    testImplementation 'net.serenity-bdd:serenity-core:1.1.26'
+    testImplementation 'net.serenity-bdd:serenity-junit:1.1.26'
+    implementation 'net.serenity-bdd:serenity-screenplay:1.1.26'
+   // implementation 'net.serenity-bdd:serenity-screenplay-rest:1.1.26'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.51'
+
+}**/
