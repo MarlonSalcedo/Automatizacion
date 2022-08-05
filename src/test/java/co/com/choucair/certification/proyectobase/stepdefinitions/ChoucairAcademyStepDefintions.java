@@ -20,19 +20,19 @@ public class ChoucairAcademyStepDefintions {
     }
     @Given("^than marlon eants to learn automation at the academy Choucair$")
     public void thanMarlonEantsToLearnAutomationAtTheAcademyChoucair() throws Throwable {
-        OnStage.theActorCalled("Marlon").wasAbleTo(Openup.thePage(), (Login.onThePage()));
+        OnStage.theActorCalled("Marlon").wasAbleTo(Openup.thePage());
 
     }
 
     @When("^he search for the course (.*) on the choucair academy plataform$")
     public void heSearchForTheCourseRecursoAutomatizacionBancolombiaOnTheChoucairAcademyPlataform(String course) throws Throwable {
-        OnStage.theActorInTheSpotlight().attemptsTo(Search.the(course));
+        OnStage.theActorInTheSpotlight().attemptsTo(Search.onThePage());
 
     }
 
     @Then("^he finds the course called resources recursos (.*)$")
     public void heFindsTheCourseCalledResourcesRecursosAutomatizacionBancolombia(String question) throws Throwable {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe("Welcome to the world's largest community of freelance software testers!")));
 
     }
 }
