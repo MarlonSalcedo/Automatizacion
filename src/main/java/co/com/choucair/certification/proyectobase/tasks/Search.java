@@ -19,10 +19,22 @@ public class Search implements Task {
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BUTTON_UC ),
-                Enter.theValue(course).into(INPUT_COURSE),
-                Click.on(BUTTON_GO),
-                Click.on(SELECT_COURSE));
+        actor.attemptsTo(Click.on(BUTTON_FIRST ),
+                Click.on(BUTTON_SECOND),
+                Click.on(BUTTON_THRID),
+                Click.on(BUTTON_CARRITO),
+                Click.on(BUTTON_REMOVE_FIRST),
+                Click.on(BUTTON_REMOVE_SECOND),
+                Click.on(BUTTON_REMOVE_THRID),
+                Click.on(BUTTON_CONUE),
+
+                Enter.theValue("Marlon").into(INPUT_NAME),
+                Enter.theValue("Salcedo").into(INPUT_LAST_NAME),
+                Enter.theValue("55605").into(INPUT_POSTAL_CODE),
+                Click.on(BUTTON_CONUE_IMPORT));
+                //Enter.theValue(course).into(INPUT_COURSE),
+               // Click.on(BUTTON_GO),
+                //Click.on(SELECT_COURSE));
 
     }
 }

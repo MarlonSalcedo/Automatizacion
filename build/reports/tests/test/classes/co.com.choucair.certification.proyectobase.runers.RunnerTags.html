@@ -86,67 +86,9 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-?[31mFailed scenarios:?[0m
-?[31msrc/test/resources/features/academyChoucair.feature:7 ?[0m# Scenario: Search for a automation course
-
-1 Scenarios (?[31m1 failed?[0m)
-3 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m1 passed?[0m)
-0m40,258s
-
-net.serenitybdd.core.exceptions.SerenityManagedException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;coursesearchbox&quot;}
-  (Session info: chrome=93.0.4577.63)
-  (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.16 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'DESKTOP-1Q12JHO', ip: '192.168.101.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.4'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55226}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=C:\Users\mcsal\AppData\Local\Temp\scoped_dir10752_259128906}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.63, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 6180a3e1f48996fee4dc51458879ed0f
-*** Element info: {Using=id, value=coursesearchbox}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:269)
-	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:16)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:176)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.withTimeoutOf(WebElementFacadeImpl.java:312)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:715)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.type(WebElementFacadeImpl.java:604)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget.performAs(EnterValueIntoTarget.java:18)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$$EnhancerByCGLIB$$332f447a.CGLIB$performAs$0(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$$EnhancerByCGLIB$$332f447a$$FastClassByCGLIB$$143f9cdd.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$$EnhancerByCGLIB$$332f447a.performAs(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:98)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:82)
-	at co.com.choucair.certification.proyectobase.tasks.Search.performAs(Search.java:22)
-	at co.com.choucair.certification.proyectobase.tasks.Search$$EnhancerByCGLIB$$3944f042.CGLIB$performAs$0(&lt;generated&gt;)
-	at co.com.choucair.certification.proyectobase.tasks.Search$$EnhancerByCGLIB$$3944f042$$FastClassByCGLIB$$22ef4115.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
-	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
-	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:272)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:127)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)
-	at co.com.choucair.certification.proyectobase.tasks.Search$$EnhancerByCGLIB$$3944f042.performAs(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:98)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:82)
-	at co.com.choucair.certification.proyectobase.stepdefinitions.ChoucairAcademyStepDefintions.heSearchForTheCourseRecursoAutomatizacionBancolombiaOnTheChoucairAcademyPlataform(ChoucairAcademyStepDefintions.java:29)
-	at ?.When he search for the course recurso Automatizacion Bancolombia on the choucair academy plataform(src/test/resources/features/academyChoucair.feature:9)
+1 Scenarios (?[32m1 passed?[0m)
+3 Steps (?[32m3 passed?[0m)
+0m41,534s
 
 </pre>
 </span>
@@ -176,19 +118,17 @@ Session ID: 6180a3e1f48996fee4dc51458879ed0f
 -------------------------------------------------------------------------------------
 
 [Test worker] INFO net.serenitybdd.core.Serenity - Test Suite Started: Academy Choucair
-[Test worker] ERROR net.serenitybdd.core.Serenity - 
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
+[Test worker] INFO net.serenitybdd.core.Serenity - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST FAILED WITH ERROR: Search for a automation course
----------------------------------------------------------------------
-[Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Perform as: Marlon
-[Test worker] ERROR net.serenitybdd.core.Serenity - no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;coursesearchbox&quot;}  (Session info: chrome=93.0.4577.63)  (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 10.16 secondsFor documentation on this error, please visit: http://seleniumhq.org/exceptionso_such_element.htmlBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'System info: host: 'DESKTOP-1Q12JHO', ip: '192.168.101.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.4'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55226}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=C:\Users\mcsal\AppData\Local\Temp\scoped_dir10752_259128906}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.63, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]Session ID: 6180a3e1f48996fee4dc51458879ed0f*** Element info: {Using=id, value=coursesearchbox}
-[pool-1-thread-1] INFO net.thucydides.core.reports.json.JSONTestOutcomeReporter - Generating JSON report for Search for a automation course to file C:\Users\mcsal\IdeaProjects\co.com.choucair.certification.proyectobase\target\site\serenity\fbe6f4d200b34e01ac46b4225d2ace94dcb3ffe4e5ba8961c731a4f32e03aa8e.json (using temp file C:\Users\mcsal\IdeaProjects\co.com.choucair.certification.proyectobase\target\site\serenity\fbe6f4d200b34e01ac46b4225d2ace94dcb3ffe4e5ba8961c731a4f32e03aa8e.json749603ab-f941-4486-9711-6d60d0be1e6f)
+TEST PASSED: Search for a automation course
+----------------------------------------------------------------------------
+[pool-1-thread-1] INFO net.thucydides.core.reports.json.JSONTestOutcomeReporter - Generating JSON report for Search for a automation course to file C:\Users\mcsal\IdeaProjects\co.com.choucair.certification.proyectobase\target\site\serenity\fbe6f4d200b34e01ac46b4225d2ace94dcb3ffe4e5ba8961c731a4f32e03aa8e.json (using temp file C:\Users\mcsal\IdeaProjects\co.com.choucair.certification.proyectobase\target\site\serenity\fbe6f4d200b34e01ac46b4225d2ace94dcb3ffe4e5ba8961c731a4f32e03aa8e.json46b45bdb-9e33-45fa-b21e-a8f9c1b335da)
 [pool-1-thread-2] INFO net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - GENERATING HTML REPORT FOR Academy Choucair:Search for a automation course in fbe6f4d200b34e01ac46b4225d2ace94dcb3ffe4e5ba8961c731a4f32e03aa8e.html in directory target\site\serenity  
 </pre>
 </span>
@@ -201,7 +141,7 @@ TEST FAILED WITH ERROR: Search for a automation course
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at 3/08/2022, 6:46:34 p. m.</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 31/08/2022, 9:52:25 p. m.</p>
 </div>
 </div>
 </body>
